@@ -62,6 +62,7 @@ and hit Open. This should prompt you for your password. If you see something tha
 	
 then you're good.
 
+***
 
 ###Setting up our Environment
 
@@ -110,6 +111,8 @@ This is the folder to which the symlink _(shortcut)_ we put in your home directo
 this should print:
 
 	/afs/glue.umd.ed/software/java/current/sys/bin/java
+
+***
 	
 ###UNIX... 
 
