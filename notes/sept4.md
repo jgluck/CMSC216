@@ -1,4 +1,4 @@
-##Notes for Class Sept4 (Setting Things Up, Getting Acquainted)
+##Notes for Class Sept5 (Setting Things Up, Getting Acquainted)
 #####Resident TA: Jon Gluck
 ***
 
