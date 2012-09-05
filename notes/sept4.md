@@ -24,7 +24,7 @@ This class is going to use the EMACS editor. I'm a fan of Vim, the other big edi
 ###Connecting to the cluster
 
 
-Although you have to option work on your own machines, we're going to be using the Linux grace cluster this semester. There are several ways to connect to this cluster from your laptops. More detail may be found at [THIS](http://www.cs.umd.edu/~nelson/classes/utilities/BasicUnix.html) link.
+Although you have the option to work on your own machines, we're going to be using the Linux grace cluster this semester. There are several ways to connect to this cluster from your laptops. More detail may be found at [THIS](http://www.cs.umd.edu/~nelson/classes/utilities/BasicUnix.html) link.
 
 ####Linux or OS X
 
