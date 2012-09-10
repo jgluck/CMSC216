@@ -1,4 +1,4 @@
-##Notes for Class Sept4
+##Notes for Class Sept5 (Setting Things Up, Getting Acquainted)
 #####Resident TA: Jon Gluck
 ***
 
@@ -15,16 +15,16 @@
 We're going to be programming in C, which is one heck of a language. Many people say C is basically high level machine code.
 
 We're going to be using the UNIX operating system. Some modern systems you might know use UNIX:
-	* Mac OS X
-	* Ubuntu (Linux in General)
-	* iOS
+* 	Mac OS X
+*	 Ubuntu (Linux in General)
+*	 iOS
 
 This class is going to use the EMACS editor. I'm a fan of Vim, the other big editor, so bear with me as I try to help you. 
 
 ###Connecting to the cluster
 
 
-Although you have to option work on your own machines, we're going to be using the Linux grace cluster this semester. There are several ways to connect to this cluster from your laptops. More detail may be found at [THIS](http://www.cs.umd.edu/~nelson/classes/utilities/BasicUnix.html) link.
+Although you have the option to work on your own machines, we're going to be using the Linux grace cluster this semester. There are several ways to connect to this cluster from your laptops. More detail may be found at [THIS](http://www.cs.umd.edu/~nelson/classes/utilities/BasicUnix.html) link.
 
 ####Linux or OS X
 
