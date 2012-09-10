@@ -59,4 +59,15 @@ gcc is a very complex program and as such has hundreds of possible flags. One co
 	gcc -o myAwesomeProgramName myPrettyGoodCode.c
 
  which allows you to define the name of the output executable (your compiled program). If this flag isn't set, the compiled executable will simply be called "a.out". If you want to read more about gcc's flags you can find a [list of all of them](http://tigcc.ticalc.org/doc/comopts.html) online.
+ 
+#####Question:
+
+	How do you run shell commands from inside of Emacs
+	
+#####Answer
+
+If you remember the notation for Emacs commands M- is the meta key (escape) and C- (is control). In order to run shell commands from inside of Emacs the key stroke is:
+
+	M-! <Command>
+
 
