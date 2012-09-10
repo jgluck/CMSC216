@@ -69,7 +69,7 @@ You can now run more than one program at once through SSH. (If those programs ar
 
 	Firefox
 
-You'll notice that, even though Firefox has finished launching, you can no longer do anything in your terminal. This is because Firefox's process has grabbed the terminal's **STDIN** (what you type into the terminal) and **STDOUT** (what the terminal displays). You can avoid by adding an "&" to the end of any command. For instance:
+You'll notice that, even though Firefox has finished launching, you can no longer do anything in your terminal. This is because Firefox's process has grabbed the terminal's **STDIN** (what you type into the terminal) and **STDOUT** (what the terminal displays). You can avoid by adding an "&" to the end of any command. This makes the program run in the background. For instance:
 
 	 Firefox &
 	 
@@ -79,7 +79,112 @@ Try that, you should notice that you can now also launch:
 	
 and anything else you want without gunking up the terminal.
 
+####If you REALLY don't want to use X-forwarding
 
+That's alright, there is a non-graphical version of most of the programs you will use this semester. Most importantly EMACS can be run without graphics by typing:
+
+	emacs -nw
+	
+***
+
+###Emacs
+
+Oh boy. Okay, so there is something of a conflict between programmers who use VI, and programmers who use Emacs. Think of it as sort of a college team rivalry. You can read a bit more about this [here](http://en.wikipedia.org/wiki/Editor_war). I use VI; however, I'm going to be endeavoring to teach you all Emacs so bear with me.
+
+####Opening a file in Emacs
+
+You can run emacs simply by typing:
+
+	emacs &
+
+however, most of the time you have a file in mind that you want to edit. The file doesn't even need to exist yet. You can do this by typing:
+
+	emacs <Filename> &
+	
+####Saving and Quitting
+
+The next most important things are how to save and how to quit. If you want to save in Emacs you can type:
+
+	<ctrl> X <ctrl> S
+
+In Emacs commands are invoked by holding down the control key. In the above command, and in all other cases, you should hold down control for the entire duration of the command. If you want to quit Emacs you can type:
+
+	<ctrl> X <ctrl> C
+	
+and the editor should exit.
+
+####Example: Hello World in Emacs
+
+We're going to run through programming a simple HelloWorld.C program in Emacs and compiling it. Begin by opening helloWorld.c in emacs.
+
+	emacs helloWorld.c &
+	
+Now paste the following code into emacs:
+
+	/* Hello World program */
+
+	#include<stdio.h>
+	
+	main()
+	{
+		int x = "apple";
+    	printf("Hello World");
+		printf("Goodnight Moon")
+
+	}
+	
+	
+Save the file by typing:
+
+	<ctrl> X <ctrl> S
+	
+Now hit the escape key and then X. This will put you in execute mode. While in execute mode type:
+
+	compile
+	
+and hit enter. You should see emacs suggest "make -k" as a compilation command. Instead you should erase that and type:
+
+	gcc helloWorld.c
+	
+OH NO! There were errors in the file. Luckily for us we were using emacs. If you click on any of the errors in the bottom frame emacs will move your cursor to the syntax error. This can be very helpful in large files. Fix these errors and then try compiling again. 
+
+
+ 
+
+####Helpful Links
+
+You can also find these Emacs cheat sheets on the class's [Reources Page](http://www.cs.umd.edu/class/fall2012/cmsc216/resources.shtml) but [Here](http://www.rgrjr.com/emacs/emacs_cheat.html) is one and [Here](https://ccrma.stanford.edu/guides/package/emacs/emacs.html) is another. 
 	
 
+***
+
+###A few more UNIX concepts
+
+I know you are all in love with UNIX by now.
+
+####TARBALLS
+
+ Files that end in .tgz are known as "tarballs". They are just compressed files, a lot like .zip or .rar files. You can create a tarball by putting all the files you want compressed in a directory and running:
+
+	tar -pczf <name_of_your_archive.tar.gz> </path/to/directory>
+
+You can unzip these by running:
+	
+	tar -xvf <myTarfile>.tgz
+	
+####Wildcards "*"
+
+We went over the cp and mv command the other day. These commands take file names as arguments; however, what if we wanted to specify a few files to mv, or maybe just mv all the files? This can be accomplished with the wildcard _"*"_.
+
+If you type the following:
+
+	cp * ~/.
+	
+it will copy all the files in your current directory into your home directory. That is because the wildcard matches ALL file names. What if we only wanted to copy file names that begin with "myF"? We can do this too:
+
+	cp myF* <destination>
+	
+This will copy all files that begin with "myF" to the destination you specified. This is particularly useful and might show up on a future quiz. 
+
+**WARNING** - Be careful when using this with mv and rm. It can cause changes that are hard, or impossible, to correct.
 
