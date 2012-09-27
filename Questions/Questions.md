@@ -70,4 +70,47 @@ If you remember the notation for Emacs commands M- is the meta key (escape) and 
 
 	M-! <Command>
 
+#####Question
+
+What does it mean to dereference a pointer?
+
+#####Answer
+
+Ok so we know that a pointer is a variable that holds a memory location for a given type. These look a bit like the following:
+
+	int*
+	char*
+	void*
+
+lets say we have an actual int (not a pointer) called 'a'
+
+	int a = 37;
+
+
+We also have an int* (a pointer to an int) called 'myPointer'
+
+	int* myPointer;
+
+we can set myPointer to point at our int 'a'.
+
+	myPointer = &a;
+
+Just for the sake of argument we're going to claim that 'a' was located at memory address 0x083. Which is now also myPointer's value. Dereferencing a pointer means reaching through the pointer to the data stored at the memory location. This looks like the following.
+
+	*myPointer
+
+The following print statements and their outputs should give you some information.
+
+
+	Code: 
+		printf("MyPointer: %p Address of a: %p\n", myPointer, &a);  
+
+		printf("MyPointer dereferenced: %d value of a: %d\n", *myPointer, a);
+
+	Output:
+		MyPointer: 0x083 Address of a: 0x083
+		MyPointer dereferenced: 37 value of a: 37
+
+Hope that Helps!
+
 
